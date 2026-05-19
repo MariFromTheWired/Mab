@@ -379,6 +379,24 @@ button:hover{
     margin-top:4px;
 }
 
+.threadDate,
+.replyDate{
+
+    color:#000;
+
+    margin-left:6px;
+
+    font-weight:normal;
+}
+
+.threadId,
+.replyId{
+
+    color:#000;
+
+    margin-left:4px;
+}
+
 /* ================= FOOTER ================= */
 
 footer{

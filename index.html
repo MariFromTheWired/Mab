@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Web 2000</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      background-color: lightblue;
-      font-family: Arial;
-      text-align: center;
-    }
+<link rel="stylesheet" href="stylesheet.css">
 
-    h1{
-      color: darkblue;
-    }
 
-    .caja{
-      background: white;
-      width: 300px;
-      margin: auto;
-      padding: 20px;
-      border: 2px solid black;
-    }
-
-    a{
-      color: blue;
-    }
-  </style>
+<title>MAKINAMI BOARD</title>
 </head>
+
 <body>
 
-  <h1>Bienvenido a mi página</h1>
+<header>
 
-  <div class="caja">
-    <p>Hola, esta es mi web hecha con HTML y CSS.</p>
+    <div class="logo">
+        [/Mab/] - MAKINAMI RETRO BOARD
+    </div>
 
-    <a href="#">Haz clic aquí</a>
-  </div>
+    <div class="subtitle">
+        anonymous imageboard style discussion board
+    </div>
+
+</header>
+
+<!-- CREATE THREAD -->
+
+<div class="postForm">
+
+    <div class="formRow">
+        <div class="formLabel">Name</div>
+
+        <div class="formField">
+            <input type="text" id="threadName">
+        </div>
+    </div>
+
+    <div class="formRow">
+        <div class="formLabel">Subject</div>
+
+        <div class="formField">
+            <input type="text" id="threadSubject">
+        </div>
+    </div>
+
+    <div class="formRow">
+        <div class="formLabel">Comment</div>
+
+        <div class="formField">
+            <textarea id="threadComment"></textarea>
+        </div>
+    </div>
+
+    <button onclick="createThread()">
+        Post
+    </button>
+
+</div>
+
+<!-- BOARD -->
+
+<div class="board" id="board"></div>
+
+<footer>
+    Futaba Retro Board © 2003 style
+</footer>
+
+<script src="https://atiiettvcisvexbytedj.supabase.co/rest/v1/"></script>
+<script src="script.js"></script>
 
 </body>
+
+
 </html>

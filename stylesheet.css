@@ -1,0 +1,227 @@
+
+
+:root{
+    --gradient: linear-gradient(
+        180deg,
+        rgba(255, 204, 170, 1) 0%,
+        rgba(254, 255, 237, 1) 20%
+    );
+
+    --box: #f0e0d6;
+    --white: #FFFFEE;
+    --redtext: #800;
+    --greentext: #789922;
+    --font: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--white);
+    background-image:var(--gradient);
+    background-repeat:repeat-x;
+
+    font-family:var(--font);
+    font-size:10pt;
+    color:#000;
+}
+
+/* ===== HEADER ===== */
+
+header{
+    text-align:center;
+    padding:18px 10px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--redtext);
+}
+
+.subtitle{
+    margin-top:4px;
+    color:var(--redtext);
+    font-size:9pt;
+}
+
+/* ===== FORM ===== */
+
+.postForm{
+    width:700px;
+    margin:16px auto;
+    background:var(--box);
+    border:1px solid #b7a99a;
+    padding:10px;
+}
+
+.formRow{
+    display:flex;
+    margin-bottom:6px;
+}
+
+.formLabel{
+    width:100px;
+    background:#ea8;
+    color:#800;
+    padding:4px;
+    border:1px solid #c97;
+    font-weight:bold;
+}
+
+.formField{
+    flex:1;
+}
+
+input,
+textarea{
+    width:100%;
+    border:1px solid #999;
+    padding:4px;
+    font-family:var(--font);
+    font-size:10pt;
+    background:#fff;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+button{
+    margin-top:6px;
+    padding:4px 10px;
+    border:1px solid #999;
+    background:#f0e0d6;
+    font-family:var(--font);
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ead8ca;
+}
+
+/* ===== BOARD ===== */
+
+.board{
+    width:95%;
+    margin:auto;
+}
+
+/* ===== THREAD ===== */
+
+.thread{
+    margin-bottom:30px;
+}
+
+/* ===== OP ===== */
+
+.op{
+    display:block;
+    padding:8px;
+}
+
+/* ===== REPLIES ===== */
+
+.replyContainer{
+    margin-left:24px;
+    margin-top:4px;
+}
+
+.reply{
+    display:inline-block;
+    background:var(--box);
+    border:1px solid #d9bfb7;
+    padding:6px 8px;
+    min-width:420px;
+}
+
+/* ===== SIDE ARROWS ===== */
+
+.sideArrows{
+    float:left;
+    color:#B7A99A;
+    margin-right:4px;
+    margin-top:8px;
+    font-weight:bold;
+}
+
+/* ===== POST INFO ===== */
+
+.postInfo{
+    margin-bottom:6px;
+}
+
+.subject{
+    color:var(--redtext);
+    font-weight:bold;
+}
+
+.name{
+    color:#117743;
+    font-weight:bold;
+}
+
+.date{
+    color:#000;
+}
+
+.postNum{
+    color:#000;
+}
+
+/* ===== MESSAGE ===== */
+
+.postMessage{
+    margin-top:8px;
+    line-height:1.35em;
+    white-space:pre-wrap;
+    overflow-wrap:break-word;
+}
+
+/* ===== GREENTEXT ===== */
+
+.greentext{
+    color:var(--greentext);
+}
+
+/* ===== REPLY FORM ===== */
+
+.replyForm{
+    margin-top:10px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    color:var(--redtext);
+    font-size:9pt;
+    padding:20px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:760px){
+
+    .postForm{
+        width:95%;
+    }
+
+    .reply{
+        min-width:auto;
+        width:calc(100% - 12px);
+    }
+
+    .formRow{
+        flex-direction:column;
+    }
+
+    .formLabel{
+        width:100%;
+    }
+}

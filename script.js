@@ -109,8 +109,6 @@ async function acceptRules(){
     loadThreads();
 }
 
-loadThreads();
-
 /* =========================
    RANDOM IMAGE
 ========================= */

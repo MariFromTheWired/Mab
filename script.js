@@ -3,7 +3,7 @@
 ========================= */
 
 const SUPABASE_URL =
-"https://atiiettvcisvexbytedj.supabase.co/rest/v1/";
+"https://atiiettvcisvexbytedj.supabase.co";
 
 const SUPABASE_KEY =
 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0aWlldHR2Y2lzdmV4Ynl0ZWRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxNDAwNTksImV4cCI6MjA5NDcxNjA1OX0.hxE85URIUyFwzGomfr8DuBY47a8cUklvop-ZXsEOPdM";

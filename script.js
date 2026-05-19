@@ -109,6 +109,31 @@ async function acceptRules(){
     loadThreads();
 }
 
+loadThreads();
+
+/* =========================
+   RANDOM IMAGE
+========================= */
+
+const images = [
+
+    "mari_sus.gif",
+    "futaba_typing.gif"
+
+];
+
+const randomImage =
+
+images[
+    Math.floor(
+        Math.random() * images.length
+    )
+];
+
+document.getElementById(
+    "makichan"
+).src = randomImage;
+
 /* =========================
    LOAD THREADS
 ========================= */

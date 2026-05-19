@@ -198,27 +198,43 @@ async function addReply(threadId){
         return;
     }
 
-    const { error } =
-    await db
-
-    .from("replies")
-
-    .insert([{
-
-        thread_id:threadId,
-
-        author,
-
-        message
-
-    }]);
-
-    if(error){
-
-        console.error(error);
-
-        return;
-    }
+   const response =
+   await fetch(
+   
+       "https://atiiettvcisvexbytedj.supabase.co/functions/v1/create-reply",
+   
+       {
+   
+           method:"POST",
+   
+           headers:{
+               "Content-Type":
+               "application/json"
+           },
+   
+           body:JSON.stringify({
+   
+               thread_id:threadId,
+   
+               name:author,
+   
+               message
+   
+           })
+       }
+   );
+   
+   const result =
+   await response.json();
+   
+   if(!response.ok){
+   
+       console.error(result);
+   
+       alert("Error creating reply");
+   
+       return;
+   }
 
     loadThreads();
 }
